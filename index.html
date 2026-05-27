@@ -183,7 +183,9 @@ body:has(button:hover) #cursor-ring { width: 52px; height: 52px; border-color: v
 }
 .hero-lamp-visual img {
   width: 100%; height: 100%;
+  margin-top:90px;  
   object-fit: cover;
+  
 }
 .hero-content {
   position: relative; z-index: 3;
@@ -435,7 +437,7 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
 .payment-card { padding: 4px 10px; border: 1px solid var(--border); font-family: var(--font-sans); font-size: 0.55rem; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; background: #fff; }
 
 /* ========================================
-   PRODUCT PAGE
+   PRODUCT INTERACTIVE CORE LAYOUT
 ======================================== */
 .product-page-wrap { padding-top: 100px; }
 .product-main { display: grid; grid-template-columns: 55% 45%; gap: 0; padding: 5rem 5%; max-width: 1400px; margin: 0 auto; }
@@ -458,7 +460,7 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
 .rating-count { font-family: var(--font-sans); font-size: 0.68rem; color: var(--text-muted); letter-spacing: 0.05em; }
 .product-price-section { margin-bottom: 2.5rem; }
 .product-page-price { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 400; color: var(--black); }
-.product-page-price s { font-size: 1.2rem; color: var(--text-dim); margin-right: 0.5rem; font-weight: 300; }
+.product-page-price s { font-size: 1.2rem; color: var(--text-dim); margin-right: 0.5rem; font-weight: 300; display: none; }
 .price-note { font-family: var(--font-sans); font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.1em; margin-top: 0.4rem; }
 .divider-line { width: 100%; height: 1px; background: var(--border); margin: 2rem 0; }
 .variant-label { font-family: var(--font-sans); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--black); margin-bottom: 0.9rem; }
@@ -620,7 +622,6 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
   .product-card { flex: 0 0 100%; }
 }
 
-/* Mobile nav overlay layout frame */
 .mobile-nav {
   position: fixed; inset: 0; z-index: 999; background: rgba(255,255,255,0.98); backdrop-filter: blur(20px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; transform: translateX(100%); transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
 }
@@ -671,7 +672,7 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
     <div class="hero-bg"></div>
 
     <div class="hero-lamp-visual">
-      <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800" alt="iHam Luxury Minimalist Lighting Apparatus Design Platform">
+      <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800" alt="iHam Luxury Minimalist Lighting Design Platform">
     </div>
 
     <div class="hero-content">
@@ -709,86 +710,12 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
     </div>
     <div class="slider-wrapper">
       <div class="slider-track" id="collectionTrack">
-
-        <div class="product-card" onclick="showPage('product')">
-          <div class="product-card-img">
-            <img src="https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=500" alt="Aurelius Floor Lamp">
-            <div class="product-card-overlay">
-              <button class="overlay-btn">Inspect Node</button>
-            </div>
-          </div>
-          <div class="product-card-info">
-            <div class="product-material">Brushed Brass · Marble Element</div>
-            <div class="product-name">Aurelius Floor Lamp</div>
-            <div class="product-price"><s>$820</s>$649</div>
-          </div>
-        </div>
-
-        <div class="product-card" onclick="showPage('product')">
-          <div class="product-card-img">
-            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=500" alt="Lumière Pendant">
-            <div class="product-card-overlay">
-              <button class="overlay-btn">Inspect Node</button>
-            </div>
-          </div>
-          <div class="product-card-info">
-            <div class="product-material">Smoked Glass Matrix · Chrome</div>
-            <div class="product-name">Lumière Pendant</div>
-            <div class="product-price">$480</div>
-          </div>
-        </div>
-
-        <div class="product-card" onclick="showPage('product')">
-          <div class="product-card-img">
-            <img src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=500" alt="Solène Table Lamp">
-            <div class="product-card-overlay">
-              <button class="overlay-btn">Inspect Node</button>
-            </div>
-          </div>
-          <div class="product-card-info">
-            <div class="product-material">Ceramic Body · Solid Walnut</div>
-            <div class="product-name">Solène Table Lamp</div>
-            <div class="product-price"><s>$390</s>$298</div>
-          </div>
-        </div>
-
-        <div class="product-card" onclick="showPage('product')">
-          <div class="product-card-img">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=500" alt="Arc Nero Floor Lamp">
-            <div class="product-card-overlay">
-              <button class="overlay-btn">Inspect Node</button>
-            </div>
-          </div>
-          <div class="product-card-info">
-            <div class="product-material">Espresso Bronze · Saddle Leather</div>
-            <div class="product-name">Arc Nero Floor Lamp</div>
-            <div class="product-price">$1,240</div>
-          </div>
-        </div>
-
-        <div class="product-card" onclick="showPage('product')">
-          <div class="product-card-img">
-            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=500" alt="Colonne Table Lamp">
-            <div class="product-card-overlay">
-              <button class="overlay-btn">Inspect Node</button>
-            </div>
-          </div>
-          <div class="product-card-info">
-            <div class="product-material">Opaline Frosted Glass Element</div>
-            <div class="product-name">Colonne Table Lamp</div>
-            <div class="product-price">$560</div>
-          </div>
-        </div>
-
-      </div>
+         </div>
     </div>
     <div class="slider-controls">
       <button class="slider-btn" onclick="slideCollection(-1)">←</button>
       <div class="slider-dots" id="collectionDots">
-        <div class="slider-dot active" onclick="goToSlide(0)"></div>
-        <div class="slider-dot" onclick="goToSlide(1)"></div>
-        <div class="slider-dot" onclick="goToSlide(2)"></div>
-      </div>
+         </div>
       <button class="slider-btn" onclick="slideCollection(1)">⟶</button>
     </div>
   </section>
@@ -799,36 +726,36 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
       <h2 class="section-title">Architectural <em>Formats</em></h2>
     </div>
     <div class="categories-grid">
-      <div class="cat-card cat-card-large">
+      <div class="cat-card cat-card-large" onclick="triggerDirectProductSelection(0)">
         <div class="cat-card-visual">
           <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" alt="Floor monoliths">
         </div>
         <div class="cat-card-body">
           <div class="cat-label">Monolithic Statements</div>
           <div class="cat-title">Floor Elements</div>
-          <a href="#" class="cat-link" onclick="showPage('product')">Acquire Allocation →</a>
+          <a href="#" class="cat-link">Acquire Allocation →</a>
         </div>
       </div>
 
-      <div class="cat-card">
+      <div class="cat-card" onclick="triggerDirectProductSelection(1)">
         <div class="cat-card-visual">
           <img src="https://images.unsplash.com/photo-1565538810844-1e119d81a207?auto=format&fit=crop&q=80&w=500" alt="Pendant luminaires">
         </div>
         <div class="cat-card-body">
           <div class="cat-label">Ambient Modules</div>
           <div class="cat-title">Pendant Tracks</div>
-          <a href="#" class="cat-link" onclick="showPage('product')">Acquire Allocation →</a>
+          <a href="#" class="cat-link">Acquire Allocation →</a>
         </div>
       </div>
 
-      <div class="cat-card">
+      <div class="cat-card" onclick="triggerDirectProductSelection(2)">
         <div class="cat-card-visual">
           <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=500" alt="Luxury Home Decor">
         </div>
         <div class="cat-card-body">
           <div class="cat-label">Sculpted Accents</div>
           <div class="cat-title">Home Décor</div>
-          <a href="#" class="cat-link" onclick="showPage('product')">Acquire Allocation →</a>
+          <a href="#" class="cat-link">Acquire Allocation →</a>
         </div>
       </div>
     </div>
@@ -841,30 +768,12 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
       <p class="section-desc">A step inside the global architectural projects utilizing iHam instruments.</p>
     </div>
     <div class="insta-grid">
-      <div class="insta-item">
-        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=400" alt="Interior installation frame">
-        <div class="insta-overlay"><span class="insta-icon">✦</span></div>
-      </div>
-      <div class="insta-item">
-        <img src="https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&q=80&w=400" alt="Interior installation frame">
-        <div class="insta-overlay"><span class="insta-icon">✦</span></div>
-      </div>
-      <div class="insta-item">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400" alt="Interior installation frame">
-        <div class="insta-overlay"><span class="insta-icon">✦</span></div>
-      </div>
-      <div class="insta-item">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400" alt="Interior installation frame">
-        <div class="insta-overlay"><span class="insta-icon">✦</span></div>
-      </div>
-      <div class="insta-item">
-        <img src="https://images.unsplash.com/photo-1616176596249-16a7f2122b52?auto=format&fit=crop&q=80&w=400" alt="Interior installation frame">
-        <div class="insta-overlay"><span class="insta-icon">✦</span></div>
-      </div>
-      <div class="insta-item">
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" alt="Interior installation frame">
-        <div class="insta-overlay"><span class="insta-icon">✦</span></div>
-      </div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=400" alt="Interior"><div class="insta-overlay"><span class="insta-icon">✦</span></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&q=80&w=400" alt="Interior"><div class="insta-overlay"><span class="insta-icon">✦</span></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400" alt="Interior"><div class="insta-overlay"><span class="insta-icon">✦</span></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400" alt="Interior"><div class="insta-overlay"><span class="insta-icon">✦</span></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1616176596249-16a7f2122b52?auto=format&fit=crop&q=80&w=400" alt="Interior"><div class="insta-overlay"><span class="insta-icon">✦</span></div></div>
+      <div class="insta-item"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=400" alt="Interior"><div class="insta-overlay"><span class="insta-icon">✦</span></div></div>
     </div>
   </section>
 
@@ -876,43 +785,19 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
     <div class="reviews-carousel">
       <div class="reviews-track" id="reviewsTrack">
         <div class="review-card">
-          <div class="review-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
+          <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
           <p class="review-text">The Aurelius floor lamp has completely recontextualized our main salon. The weight of the raw marble element and warmth of the brushed brass is spectacular.</p>
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">SL</div>
-            <div>
-              <div class="reviewer-name">Sophia Laurent</div>
-              <div class="reviewer-loc">Paris, France</div>
-            </div>
-          </div>
+          <div class="reviewer-info"><div class="reviewer-avatar">SL</div><div><div class="reviewer-name">Sophia Laurent</div><div class="reviewer-loc">Paris, France</div></div></div>
         </div>
         <div class="review-card">
-          <div class="review-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
+          <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
           <p class="review-text">The architectural delivery crates and secure internal layouts indicate a brand operating at the highest tier of premium client care. Flawless instrumentation.</p>
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">MH</div>
-            <div>
-              <div class="reviewer-name">Marcus Hoffmann</div>
-              <div class="reviewer-loc">Berlin, Germany</div>
-            </div>
-          </div>
+          <div class="reviewer-info"><div class="reviewer-avatar">MH</div><div><div class="reviewer-name">Marcus Hoffmann</div><div class="reviewer-loc">Berlin, Germany</div></div></div>
         </div>
         <div class="review-card">
-          <div class="review-stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
+          <div class="review-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
           <p class="review-text">Lumière pendant casts an exceptionally uniform beam field across our conference assets. Beautiful, minimalist engineering execution.</p>
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">AN</div>
-            <div>
-              <div class="reviewer-name">Aisha Nakamura</div>
-              <div class="reviewer-loc">Tokyo, Japan</div>
-            </div>
-          </div>
+          <div class="reviewer-info"><div class="reviewer-avatar">AN</div><div><div class="reviewer-name">Aisha Nakamura</div><div class="reviewer-loc">Tokyo, Japan</div></div></div>
         </div>
       </div>
     </div>
@@ -927,8 +812,8 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
     <h2 class="section-title animate-reveal">Join the <em>Atelier Inner Circle</em></h2>
     <p class="animate-reveal">Gain allocation rights to seasonal collection blueprints and immediate access to cloud project support paths.</p>
     <div class="animate-reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <button class="btn-gold"><span>Register Architecture</span></button>
-      <button class="btn-outline"><span>Atelier Blueprint Details</span></button>
+      <button class="btn-gold" onclick="showPage('contact')"><span>Register Architecture</span></button>
+      <button class="btn-outline" onclick="showPage('product')"><span>Atelier Blueprints</span></button>
     </div>
   </section>
 
@@ -936,116 +821,87 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
     <div class="footer-grid">
       <div>
         <div class="nav-logo" style="display:inline-block;margin-bottom:0;">i<span>H</span>am</div>
-        <p class="footer-brand-text">
-          Pristine spatial instrumentation meticulously built with the clean mechanical DNA of modern luxury restraint.
-        </p>
+        <p class="footer-brand-text">Pristine spatial instrumentation meticulously built with the clean mechanical DNA of modern luxury restraint.</p>
         <div class="footer-social">
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">ig</a>
-          <a href="#" class="social-btn">pi</a>
-          <a href="#" class="social-btn">tw</a>
+          <a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a><a href="#" class="social-btn">pi</a><a href="#" class="social-btn">tw</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Inventory</h4>
         <ul>
-          <li><a href="#">Floor Monoliths</a></li>
-          <li><a href="#">Desk Elements</a></li>
-          <li><a href="#">Pendant Modules</a></li>
-          <li><a href="#">Wall Sconces</a></li>
-          <li><a href="#">Sculpted Objects</a></li>
+          <li><a href="#" onclick="triggerDirectProductSelection(0)">Floor Monoliths</a></li>
+          <li><a href="#" onclick="triggerDirectProductSelection(2)">Desk Elements</a></li>
+          <li><a href="#" onclick="triggerDirectProductSelection(1)">Pendant Modules</a></li>
+          <li><a href="#" onclick="triggerDirectProductSelection(3)">Wall Sconces</a></li>
+          <li><a href="#" onclick="triggerDirectProductSelection(4)">Sculpted Objects</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Collective</h4>
-        <ul>
-          <li><a href="#">Atelier Ethos</a></li>
-          <li><a href="#">Traceability Manual</a></li>
-          <li><a href="#">Eco-Restraint Mandate</a></li>
-          <li><a href="#">Journal Access</a></li>
-          <li><a href="#" onclick="showPage('contact')">Inquire Desk</a></li>
-        </ul>
+        <ul><li><a href="#">Atelier Ethos</a></li><li><a href="#">Traceability Manual</a></li><li><a href="#">Eco-Restraint Mandate</a></li><li><a href="#">Journal Access</a></li><li><a href="#" onclick="showPage('contact')">Inquire Desk</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>Atelier Care</h4>
-        <ul>
-          <li><a href="#">Insured Transit Freight</a></li>
-          <li><a href="#">Blueprints Allocation Return</a></li>
-          <li><a href="#">Material Integrity Care</a></li>
-          <li><a href="#">Architect Registry Program</a></li>
-          <li><a href="#">FAQ Ledger</a></li>
-        </ul>
+        <ul><li><a href="#">Insured Transit Freight</a></li><li><a href="#">Blueprints Allocation Return</a></li><li><a href="#">Material Integrity Care</a></li><li><a href="#">Architect Registry Program</a></li><li><a href="#">FAQ Ledger</a></li></ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 iHam Luxury Systems Corp. All Rights Strictly Safeguarded.</div>
-      <div class="footer-cards">
-        <div class="payment-card">Visa Platinum</div>
-        <div class="payment-card">Mastercard Black</div>
-        <div class="payment-card">Amex Centurion</div>
-      </div>
+      <div class="footer-cards"><div class="payment-card">Visa Platinum</div><div class="payment-card">Mastercard Black</div><div class="payment-card">Amex Centurion</div></div>
     </div>
   </footer>
 
-</div><div id="page-product" class="page">
+</div>
+
+
+<div id="page-product" class="page">
   <div class="product-page-wrap">
     <div class="product-main">
+      
       <div class="product-gallery">
         <div class="gallery-main" id="galleryMain">
-          <img id="mainProductImage" src="https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=800" alt="Active Dynamic Product Asset View Selector">
+          <img id="mainProductImage" src="" alt="Dynamic Asset Selector Frame">
           <div class="gallery-zoom-hint">⊕ Interactive Studio View</div>
         </div>
-        <div class="gallery-thumbs">
-          <div class="gallery-thumb active" onclick="changeThumb(this, 'https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=800')">
-            <img src="https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=150" alt="Thumb">
-          </div>
-          <div class="gallery-thumb" onclick="changeThumb(this, 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=800')">
-            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=150" alt="Thumb">
-          </div>
-          <div class="gallery-thumb" onclick="changeThumb(this, 'https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=800')">
-            <img src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=150" alt="Thumb">
-          </div>
-          <div class="gallery-thumb" onclick="changeThumb(this, 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800')">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=150" alt="Thumb">
-          </div>
-        </div>
+        <div class="gallery-thumbs" id="galleryThumbsHook">
+           </div>
       </div>
 
       <div class="product-info-panel">
         <div class="product-breadcrumb">
           <a href="#" onclick="showPage('home')" style="color:var(--text-dim);text-decoration:none;">Home Hub</a>
-          / Floor Monoliths /
-          <span>Aurelius</span>
+          / <span id="productCategoryBreadcrumb">Collection Matrix</span> /
+          <span id="productNameBreadcrumb">Aurelius</span>
         </div>
 
-        <h1 class="product-page-title">Aurelius<br>Floor Monolith</h1>
-        <div class="product-page-subtitle">Atelier Brushed Metal Assembly</div>
+        <h1 class="product-page-title" id="pPageTitle">Aurelius<br>Floor Monolith</h1>
+        <div class="product-page-subtitle" id="pPageSubtitle">Atelier Brushed Metal Assembly</div>
 
         <div class="product-rating-row">
           <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          <span class="rating-count">4.9 / 5 Studio Matrix — 128 Reviews</span>
+          <span class="rating-count" id="pPageRating">4.9 / 5 Studio Matrix — 128 Reviews</span>
         </div>
 
         <div class="product-price-section">
-          <div class="product-page-price"><s>$820</s>$649</div>
+          <div class="product-page-price" id="pPagePrice">$649</div>
           <div class="price-note">White-Glove Insured Freight Included · Escrow Verification Prompt Available</div>
         </div>
 
-        <div class="divider-line"></div>
+        <div class="variant-label" style="color: var(--gold); font-weight:700;">Select Collection Model</div>
+        <div class="size-variants" id="masterProductMenuSelector" style="margin-bottom:2rem; gap:0.5rem;">
+           </div>
 
-        <div class="variant-label">Atelier Finish <span id="selectedColor">Antique Brass</span></div>
-        <div class="color-variants">
-          <div class="color-swatch active" style="background:#A37E36;" title="Antique Brass" onclick="selectColor(this, 'Antique Brass')"></div>
-          <div class="color-swatch" style="background:#1A110B;" title="Matte Espresso" onclick="selectColor(this, 'Matte Espresso')"></div>
-          <div class="color-swatch" style="background:#B8B0A6;" title="Polished Champagne" onclick="selectColor(this, 'Polished Champagne')"></div>
-          <div class="color-swatch" style="background:#55483E;" title="Oxidized Walnut Bronze" onclick="selectColor(this, 'Oxidized Walnut Bronze')"></div>
-        </div>
+        <div class="divider-line" style="margin: 1rem 0 2rem 0;"></div>
 
-        <div class="variant-label">Scale Calibration</div>
+        <div class="variant-label">Atelier Finish Variation: <span id="selectedColor" style="color: var(--gold);">Antique Brass</span></div>
+        <div class="color-variants" id="productColorSwatchesHook">
+           </div>
+
+        <div class="variant-label">Scale Calibration Specs</div>
         <div class="size-variants">
-          <button class="size-btn" onclick="selectSize(this)">155 cm Baseline</button>
-          <button class="size-btn active" onclick="selectSize(this)">175 cm Standard</button>
-          <button class="size-btn" onclick="selectSize(this)">195 cm Elevation</button>
+          <button class="size-btn" onclick="selectSize(this)">Premium Baseline</button>
+          <button class="size-btn active" onclick="selectSize(this)">Architect Standard</button>
+          <button class="size-btn" onclick="selectSize(this)">Volumetric Elevation</button>
         </div>
 
         <div class="qty-row">
@@ -1057,40 +913,24 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
           <button class="add-to-cart-btn" style="flex:1;" onclick="addToCart()">
             <span>Acquire System Allocation</span>
           </button>
-          <button class="wishlist-btn" title="Add to Wishlist Portfolio">♡</button>
+          <button class="wishlist-btn" title="Add to Portfolio">♡</button>
         </div>
 
         <div class="trust-badges">
-          <div class="trust-badge">
-            <span class="trust-badge-icon">⊛</span>
-            <span class="trust-badge-text">Handcrafted Restraint</span>
-          </div>
-          <div class="trust-badge">
-            <span class="trust-badge-icon">⊛</span>
-            <span class="trust-badge-text">Insured Freight</span>
-          </div>
-          <div class="trust-badge">
-            <span class="trust-badge-icon">⊛</span>
-            <span class="trust-badge-text">3-Year Warranty</span>
-          </div>
+          <div class="trust-badge"><span class="trust-badge-icon">⊛</span><span class="trust-badge-text">Handcrafted Restraint</span></div>
+          <div class="trust-badge"><span class="trust-badge-icon">⊛</span><span class="trust-badge-text">Insured Freight</span></div>
+          <div class="trust-badge"><span class="trust-badge-icon">⊛</span><span class="trust-badge-text">3-Year Warranty</span></div>
         </div>
 
-        <div class="product-accordion">
+        <div class="product-accordion" style="margin-top: 2.5rem;">
           <div class="accordion-item open" onclick="toggleAccordion(this)">
             <button class="accordion-header">
               <span class="accordion-title">Structural Blueprint Details</span>
               <span class="accordion-icon">+</span>
             </button>
             <div class="accordion-body">
-              <div class="accordion-content">
-                <p>The Aurelius Element is an exercise in extreme material restraint. Each component is cast individually in sand matrices, meticulously polished by hand, and balanced via dense concrete counterweights.</p>
-                <ul>
-                  <li>Base Matrix: Calacatta Cream Premium Solid Marble</li>
-                  <li>Shade Membrane: Hand-stretched Belgian linen layer</li>
-                  <li>Illumination Module: Calibrated internal low-flicker LED node</li>
-                  <li>Net Instrument Weight: 8.4 kg</li>
-                </ul>
-              </div>
+              <div class="accordion-content" id="pAccordionBlueprint">
+                 </div>
             </div>
           </div>
 
@@ -1101,11 +941,9 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
             </button>
             <div class="accordion-body">
               <div class="accordion-content">
-                <ul>
-                  <li>Total Vertical Drop: 175 cm (Standard Selection)</li>
-                  <li>Base Footprint Diameter: 28 cm</li>
-                  <li>Shade Peripheral Radius: 52 cm</li>
-                  <li>Power Cord Length: 2.2 m Smoked-Weave Cable</li>
+                <ul style="display:flex; flex-direction:column; gap:0.5rem;" id="pAccordionMetrics">
+                  <li>Base Footprint Calibration: Architectural Dimension Form</li>
+                  <li>Insured Net Element Weight Grid: Standard High Mass Profile</li>
                 </ul>
               </div>
             </div>
@@ -1116,12 +954,12 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
     </div>
 
     <div class="product-reviews-section">
-      <div class="section-header animate-reveal" style="text-align:left;">
+      <div class="section-header animate-reveal" style="text-align:left; margin-bottom: 2rem;">
         <div class="section-eyebrow" style="justify-content:flex-start;">
           <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          4.9 Ledger Status
+          4.9 Ledger Status Metrics
         </div>
-        <h2 class="section-title">Client <em>Reviews</em></h2>
+        <h2 class="section-title">Client <em>Reviews Portfolio</em></h2>
       </div>
       <div class="reviews-summary">
         <div class="avg-rating">
@@ -1129,18 +967,18 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
           <div class="avg-stars">
             <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
           </div>
-          <div class="avg-count">128 Review Signals</div>
+          <div class="avg-count">128 Verified Architectural Submissions</div>
         </div>
         <div class="rating-bars">
           <div class="rating-bar-row">
             <span class="rating-bar-label">5 ★</span>
-            <div class="rating-bar-track"><div class="rating-bar-fill" style="width:82%"></div></div>
-            <span class="rating-bar-pct">82%</span>
+            <div class="rating-bar-track"><div class="rating-bar-fill" style="width:91%"></div></div>
+            <span class="rating-bar-pct">91%</span>
           </div>
           <div class="rating-bar-row">
             <span class="rating-bar-label">4 ★</span>
-            <div class="rating-bar-track"><div class="rating-bar-fill" style="width:12%"></div></div>
-            <span class="rating-bar-pct">12%</span>
+            <div class="rating-bar-track"><div class="rating-bar-fill" style="width:9%"></div></div>
+            <span class="rating-bar-pct">9%</span>
           </div>
         </div>
       </div>
@@ -1151,11 +989,11 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
   <div class="sticky-cart-bar" id="stickyCartBar">
     <div style="display:flex;align-items:center;gap:1.5rem;">
       <div style="width:50px;height:50px;background:var(--mid);border:1px solid var(--border);flex-shrink:0;overflow:hidden;">
-        <img src="https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=100" style="width:100%;height:100%;object-fit:cover;">
+        <img id="stickyCartImg" src="" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="sticky-product-info">
-        <div class="sticky-product-name">Aurelius Floor Monolith</div>
-        <div class="sticky-product-price">$649 — Standard Scale Option</div>
+        <div class="sticky-product-name" id="stickyCartName">Aurelius Floor Monolith</div>
+        <div class="sticky-product-price" id="stickyCartPrice">$649 — Standard Allocation Scale</div>
       </div>
     </div>
     <button class="sticky-add-btn" onclick="addToCart()">Confirm Allocation</button>
@@ -1163,14 +1001,17 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
 
   <footer>
     <div class="footer-bottom" style="border-top:none;padding-top:0;">
-      <div class="footer-copy">© 2026 iHam Luxury Systems Corp.</div>
+      <div class="footer-copy">© 2026 iHam Luxury Systems Corp. All Rights Safely Maintained.</div>
       <div>
         <button class="btn-outline" style="font-size:0.6rem;padding:0.6rem 1.2rem;" onclick="showPage('home')">← Return to Hub</button>
       </div>
     </div>
   </footer>
 
-</div><div id="page-contact" class="page">
+</div>
+
+
+<div id="page-contact" class="page">
   <div class="contact-page-wrap">
 
     <div class="contact-hero">
@@ -1261,7 +1102,7 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
 
     <div class="map-section">
       <div class="map-placeholder">
-        <img src="https://images.unsplash.com/photo-1524661135339-9140b0078ee0?auto=format&fit=crop&q=80&w=1200" alt="Parisian luxury architecture street framework layout grid mapping trace">
+        <img src="https://images.unsplash.com/photo-1524661135339-9140b0078ee0?auto=format&fit=crop&q=80&w=1200" alt="Parisian luxury architecture layout map route trace">
         <div class="map-overlay-card">
           <div class="map-brand">iHam Central Lab</div>
           <div class="map-addr">12 Rue de la Lumière<br>75008 Paris, France</div>
@@ -1279,7 +1120,246 @@ footer { background: #FAF8F4; border-top: 1px solid var(--border); padding: 5rem
       </div>
     </footer>
   </div>
-</div><script>
+</div>
+
+<script>
+/* ============================================================
+   GLOBAL PRODUCT DATASET SCHEMA MATRIX (ALL PRODUCTS CATALOUGE)
+   ============================================================ */
+const iHamInventoryCollection = [
+  {
+    id: 0,
+    name: "Aurelius Floor Monolith",
+    subtitle: "Atelier Brushed Metal Assembly & Calacatta Stone Base",
+    category: "Floor Monoliths",
+    price: 649,
+    oldPrice: "$820",
+    ratingText: "4.9 / 5 Studio Matrix — 128 Reviews",
+    blueprint: "The Aurelius Element is an exercise in extreme structural material restraint. Each individual linear structural rod component is cast slowly in hand-packed sand matrices, meticulously polished by artisans, and perfectly counterbalanced via dense marble stabilization columns.",
+    metrics: [
+      "Total Vertical Stand Extension Drop: 175 cm calibrated drop alignment",
+      "Base Footprint Foot Unit Profile: 28 cm solid marble thickness diameter",
+      "Shade Membrane Ray Peripheral: 52 cm hand-stretched Belgian linen layer",
+      "Net Instrument Operational Weight: 8.4 kg structural mass specification"
+    ],
+    assets: [
+      "https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=800"
+    ],
+    finishes: [
+      { label: "Antique Brass", hex: "#A37E36" },
+      { label: "Matte Espresso", hex: "#1A110B" },
+      { label: "Polished Champagne", hex: "#B8B0A6" }
+    ]
+  },
+  {
+    id: 1,
+    name: "Lumière Pendant Module",
+    subtitle: "Smoked Glass Crystalline Track Element Array",
+    category: "Pendant Modules",
+    price: 480,
+    oldPrice: null,
+    ratingText: "4.8 / 5 Uniform Output — 94 Reviews",
+    blueprint: "Engineered specifically to track clean parallel downlight projections onto raw quartz and concrete boardroom components. Suspended via dual micro-braided steel suspension tensors carrying low-voltage architectural circuits seamlessly inside tension vectors.",
+    metrics: [
+      "Tensor Cable Ceiling Drop Threshold: Max 250 cm field adjustable length",
+      "Chassis Structural Span Width: 110 cm linear glass encapsulation matrix",
+      "Luminous Source: Integrated signature low-flicker planar warm array",
+      "Total Module Net Weight Profile: 4.2 kg verified balance mass value"
+    ],
+    assets: [
+      "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&q=80&w=800"
+    ],
+    finishes: [
+      { label: "Smoked Obsidian Chrome", hex: "#3A3D40" },
+      { label: "Brushed Champagne Gold", hex: "#C9A84C" }
+    ]
+  },
+  {
+    id: 2,
+    name: "Solène Table Instrument",
+    subtitle: "Hand-Thrown Ceramic Core & Natural Turned Solid Walnut Base",
+    category: "Desk Elements",
+    price: 298,
+    oldPrice: "$390",
+    ratingText: "5.0 / 5 Celestial Symmetry — 76 Reviews",
+    blueprint: "An organic marriage of raw clay earth components with a structural touch-capacitive dimming system mapped natively across the brass perimeter ring. Features a soft-glare translucent internal porcelain diffuser plate.",
+    metrics: [
+      "Total Assembled Height Footprint: 45 cm static desk alignment",
+      "Ceramic Dome Curvature Circumference: 32 cm proportional form curvature",
+      "Solid Walnut Base Core Spec: 16 cm oil-rubbed organic wood foundation",
+      "Power Coupling Connector: 1.8 m woven flax-fiber structural cord profile"
+    ],
+    assets: [
+      "https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=800"
+    ],
+    finishes: [
+      { label: "Alabaster White Clay", hex: "#FAF4EC" },
+      { label: "Oxidized Terracotta Sand", hex: "#B87C5E" }
+    ]
+  },
+  {
+    id: 3,
+    name: "Arc Nero Floor Cantilever",
+    subtitle: "Saddle Leather Wrap Tension Arc & Low Profile Weighted Disk Base",
+    category: "Floor Monoliths",
+    price: 1240,
+    oldPrice: null,
+    ratingText: "4.9 / 5 Cantilever Equilibrium — 42 Reviews",
+    blueprint: "A masterpiece of structural engineering utilizing an optimized parabolic high-tensile steel frame clad entirely in full-grain Italian leather. Balances out completely overhead without visually cluttering mid-level spatial layers.",
+    metrics: [
+      "Max Parabolic Overhead Peak Reach: 210 cm absolute vertical elevation",
+      "Horizontal Reach Displacement Scale: 145 cm cantilever displacement path",
+      "Base Stabilizer Disk Frame Mass: 14.5 kg high-density low clearance element",
+      "Control: Step-activated floor dimming layout node integrated smoothly"
+    ],
+    assets: [
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800"
+    ],
+    finishes: [
+      { label: "Nero Leather & Black Onyx", hex: "#111111" },
+      { label: "Cuoio Brown & Brushed Bronze", hex: "#6E4E37" }
+    ]
+  },
+  {
+    id: 4,
+    name: "Colonne Space Light Pillar",
+    subtitle: "Opaline Fluted Glass Totem Array & Burnished Steel Fittings",
+    category: "Sculpted Objects",
+    price: 560,
+    oldPrice: null,
+    ratingText: "4.7 / 5 Atmospheric Glow — 38 Reviews",
+    blueprint: "Emits a pure, 360-degree radial ambient hum field. Formed via precision structural glass extrusion procedures creating pristine continuous vertical micro-grooves that scatter high-density luminance cleanly.",
+    metrics: [
+      "Total Pillar Structural Cylinder Height: 65 cm vertical table totem",
+      "Glass Column Diameter Footprint: 12 cm circular dimension trace",
+      "Light Configuration: Dual-zone vertical independent glow control matrix",
+      "Base Construction Spec Frame: Solid precision milled aircraft aluminum disc"
+    ],
+    assets: [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=800"
+    ],
+    finishes: [
+      { label: "Frosted Opaline Crystal", hex: "#EBEFF2" },
+      { label: "Smoked Champagne Ice Glass", hex: "#D4CDBC" }
+    ]
+  }
+];
+
+let activeInventoryIndex = 0;
+
+/* ---- Dynamic Collection Generation Framework Engine ---- */
+function generateCatalogDOMStructure() {
+  const track = document.getElementById('collectionTrack');
+  const dots = document.getElementById('collectionDots');
+  if (!track) return;
+
+  track.innerHTML = "";
+  dots.innerHTML = "";
+
+  iHamInventoryCollection.forEach((product, idx) => {
+    // Inject Slider Cards
+    track.innerHTML += `
+      <div class="product-card" onclick="triggerDirectProductSelection(${product.id})">
+        <div class="product-card-img">
+          <img src="${product.assets[0]}" alt="${product.name}">
+          <div class="product-card-overlay">
+            <button class="overlay-btn">Inspect Allocation Unit</button>
+          </div>
+        </div>
+        <div class="product-card-info">
+          <div class="product-material">${product.subtitle}</div>
+          <div class="product-name">${product.name}</div>
+          <div class="product-price">${product.oldPrice ? `<s>${product.oldPrice}</s>` : ''}$${product.price}</div>
+        </div>
+      </div>
+    `;
+    
+    // Inject Dynamic Pagination Dot Layout Elements
+    if (idx < iHamInventoryCollection.length - 1) {
+      dots.innerHTML += `<div class="slider-dot ${idx === 0 ? 'active' : ''}" onclick="goToSlide(${idx})"></div>`;
+    }
+  });
+}
+
+/* ---- Master Product Page State Hydration Engine Framework ---- */
+function hydrateProductDetailsView() {
+  const item = iHamInventoryCollection[activeInventoryIndex];
+  
+  // Elements Update
+  document.getElementById('productCategoryBreadcrumb').textContent = item.category;
+  document.getElementById('productNameBreadcrumb').textContent = item.name.split(" ")[0];
+  document.getElementById('pPageTitle').innerHTML = item.name.split(" ").slice(0,2).join("<br>") + `<br><span style="font-size:1.5rem; font-weight:300; color:var(--text-muted); display:block; margin-top:0.5rem;">${item.name.split(" ").slice(2).join(" ")}</span>`;
+  document.getElementById('pPageSubtitle').textContent = item.subtitle;
+  document.getElementById('pPageRating').textContent = item.ratingText;
+  document.getElementById('pPagePrice').innerHTML = item.oldPrice ? `<s>${item.oldPrice}</s> $${item.price}` : `$${item.price}`;
+  document.getElementById('pAccordionBlueprint').textContent = item.blueprint;
+  
+  // Hydrate Spatial Metrics Lists Array System
+  const metricsHook = document.getElementById('pAccordionMetrics');
+  metricsHook.innerHTML = "";
+  item.metrics.forEach(metric => {
+    metricsHook.innerHTML += `<li>${metric}</li>`;
+  });
+
+  // Load Main Imagery Assets
+  const mainImage = document.getElementById('mainProductImage');
+  mainImage.src = item.assets[0];
+
+  // Load Gallery Image Selector Thumbnails Strips Nodes
+  const thumbsHook = document.getElementById('galleryThumbsHook');
+  thumbsHook.innerHTML = "";
+  item.assets.forEach((asset, idx) => {
+    thumbsHook.innerHTML += `
+      <div class="gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="changeThumb(this, '${asset}')">
+        <img src="${asset}" alt="Asset thumbnail segment block">
+      </div>
+    `;
+  });
+
+  // Load Context Swatch Finishes Row Matrix
+  const swatchHook = document.getElementById('productColorSwatchesHook');
+  swatchHook.innerHTML = "";
+  item.finishes.forEach((fin, idx) => {
+    swatchHook.innerHTML += `
+      <div class="color-swatch ${idx === 0 ? 'active' : ''}" style="background:${fin.hex};" title="${fin.label}" onclick="selectColor(this, '${fin.label}')"></div>
+    `;
+  });
+  document.getElementById('selectedColor').textContent = item.finishes[0].label;
+
+  // Render Master Horizontal Top Menu Selector Status Bars Highlight Classes Switching Frame Setup
+  buildMasterProductMenuSelector();
+
+  // Sync Global Active Cart Sticky Strips Text Mapped Elements Natively
+  document.getElementById('stickyCartImg').src = item.assets[0];
+  document.getElementById('stickyCartName').textContent = item.name;
+  document.getElementById('stickyCartPrice').textContent = `$${item.price} — ${item.finishes[0].label}`;
+}
+
+function buildMasterProductMenuSelector() {
+  const menuHook = document.getElementById('masterProductMenuSelector');
+  if (!menuHook) return;
+  menuHook.innerHTML = "";
+  iHamInventoryCollection.forEach(prod => {
+    menuHook.innerHTML += `
+      <button class="size-btn ${prod.id === activeInventoryIndex ? 'active' : ''}" style="font-size:0.62rem; padding:0.5rem 0.8rem;" onclick="triggerDirectProductSelection(${prod.id})">
+        ${prod.name}
+      </button>
+    `;
+  });
+}
+
+function triggerDirectProductSelection(productId) {
+  activeInventoryIndex = productId;
+  showPage('product');
+  hydrateProductDetailsView();
+}
+
 /* ---- Page routing ---- */
 function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1353,7 +1433,6 @@ function initParticles() {
     H = canvas.height = canvas.offsetHeight;
   });
 }
-initParticles();
 
 /* ---- Hero animations ---- */
 function initHeroAnimations() {
@@ -1375,7 +1454,6 @@ function initHeroAnimations() {
     }, 100);
   });
 }
-initHeroAnimations();
 
 /* ---- Scroll reveal ---- */
 function initRevealAnimations() {
@@ -1395,21 +1473,21 @@ function initRevealAnimations() {
     observer.observe(el);
   });
 }
-initRevealAnimations();
 
 /* ---- Collection slider ---- */
 let collectionIdx = 0;
-const collectionTrack = document.getElementById('collectionTrack');
 function getVisibleCards() {
   return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
 }
 function slideCollection(dir) {
-  if (!collectionTrack) return;
-  const cards = collectionTrack.querySelectorAll('.product-card');
+  const track = document.getElementById('collectionTrack');
+  if (!track) return;
+  const cards = track.querySelectorAll('.product-card');
+  if (!cards.length) return;
   const max = Math.ceil(cards.length / getVisibleCards()) - 1;
   collectionIdx = Math.max(0, Math.min(collectionIdx + dir, max));
   const cardW = cards[0].offsetWidth + 24;
-  collectionTrack.style.transform = `translateX(-${collectionIdx * cardW * getVisibleCards()}px)`;
+  track.style.transform = `translateX(-${collectionIdx * cardW * getVisibleCards()}px)`;
   document.querySelectorAll('.slider-dot').forEach((d, i) => {
     d.classList.toggle('active', i === collectionIdx);
   });
@@ -1438,6 +1516,10 @@ function selectColor(swo, name) {
   swo.classList.add('active');
   const label = document.getElementById('selectedColor');
   if (label) label.textContent = name;
+  
+  // Realtime update matching color flag string text value on sticky widget
+  const activeItem = iHamInventoryCollection[activeInventoryIndex];
+  document.getElementById('stickyCartPrice').textContent = `$${activeItem.price} — ${name}`;
 }
 function selectSize(btn) {
   document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
@@ -1466,8 +1548,11 @@ function addToCart() {
 /* ---- Accordion ---- */
 function toggleAccordion(item) {
   const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
+  if (wasOpen) {
+    item.classList.remove('open');
+  } else {
+    item.classList.add('open');
+  }
 }
 
 /* ---- Gallery change trigger thumbnail mapping ---- */
@@ -1497,7 +1582,6 @@ function initStickyCart() {
   const addBtn = document.querySelector('.qty-row');
   if (addBtn) observer.observe(addBtn);
 }
-initStickyCart();
 
 function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
 
@@ -1528,6 +1612,17 @@ document.addEventListener('mousemove', (e) => {
       `;
     }
   }
+});
+
+/* ============================================================
+   SYSTEM INITIALIZATION CORE BOOTSTRAP
+   ============================================================ */
+window.addEventListener('DOMContentLoaded', () => {
+  generateCatalogDOMStructure();
+  hydrateProductDetailsView();
+  initParticles();
+  initRevealAnimations();
+  initHeroAnimations();
 });
 </script>
 </body>
